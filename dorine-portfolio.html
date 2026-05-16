@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dorine - Portfolio | Media Kit</title>  <meta name="description" content="Dorine Witteveen – UGC Creator. High-converting beauty, skincare & lifestyle content for refined brands. View portfolio & media kit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F9F6F1;
+      --warm-white: #FDFCFA;
+      --charcoal: #1A1916;
+      --muted: #6B6760;
+      --accent: #C4A882;
+      --accent-light: #E8DDD0;
+      --border: #E2DDD6;
+      --section-gap: 120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 48px;
+      background: rgba(249,246,241,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 400; letter-spacing: 0.04em;
+      text-decoration: none; color: var(--charcoal);
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--muted); font-size: 0.8rem;
+      letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-cta {
+      background: var(--charcoal); color: var(--cream) !important;
+      padding: 9px 22px; border-radius: 2px;
+    }
+    .nav-cta:hover { background: var(--accent); color: var(--charcoal) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 64px 80px 80px;
+    }
+    .hero-tag {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500; margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 28px;
+    }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-subtitle {
+      font-size: 0.95rem; color: var(--muted); line-height: 1.8;
+      max-width: 440px; margin-bottom: 48px;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block; padding: 14px 32px;
+      background: var(--charcoal); color: var(--cream);
+      text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .btn-primary:hover { background: var(--accent); color: var(--charcoal); }
+    .btn-ghost {
+      display: inline-block; padding: 14px 32px;
+      border: 1px solid var(--charcoal); color: var(--charcoal);
+      text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500; border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .btn-ghost:hover { background: var(--charcoal); color: var(--cream); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border); margin-top: 60px; padding-top: 40px; gap: 8px;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 500; color: var(--charcoal);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+    .hero-right {
+      position: relative; overflow: hidden;
+      background: var(--accent-light);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100%; gap: 3px;
+    }
+    .hero-img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.6s ease;
+    }
+    .hero-img:hover { transform: scale(1.03); }
+    .hero-img-wrap { overflow: hidden; position: relative; }
+    .hero-img-wrap:first-child { grid-row: 1 / 3; }
+
+    /* ── SECTION BASE ── */
+    section { padding: var(--section-gap) 80px; }
+    .section-tag {
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500; margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      font-weight: 300; line-height: 1.15; margin-bottom: 16px;
+    }
+    .section-title em { font-style: italic; color: var(--accent); }
+    .section-lead { color: var(--muted); max-width: 560px; font-size: 0.95rem; line-height: 1.8; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ── WHO AM I ── */
+    .about-section {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .about-photos {
+      display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 8px;
+    }
+    .about-photo {
+      width: 100%; object-fit: cover; display: block; border-radius: 2px;
+      transition: transform 0.4s ease;
+    }
+    .about-photo:hover { transform: scale(1.02); }
+    .about-photo.tall { grid-row: 1 / 3; height: 420px; }
+    .about-photo.short { height: 200px; }
+    .about-bullets { list-style: none; margin: 28px 0; }
+    .about-bullets li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.9rem; color: var(--charcoal);
+    }
+    .about-bullets li:last-child { border-bottom: none; }
+    .bullet-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); margin-top: 8px; flex-shrink: 0;
+    }
+
+    /* ── BRANDS ── */
+    .brands-section { background: var(--charcoal); color: var(--cream); }
+    .brands-section .section-title { color: var(--cream); }
+    .brands-section .section-lead { color: rgba(255,255,255,0.5); }
+    .brands-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px;
+    }
+    .brand-card {
+      background: rgba(255,255,255,0.04);
+      padding: 40px 36px; border: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.3s;
+    }
+    .brand-card:hover { background: rgba(255,255,255,0.08); }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      font-weight: 400; color: var(--cream); margin-bottom: 8px;
+    }
+    .brand-sub { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .brand-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .brand-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .brand-tag {
+      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.5); border-radius: 1px;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--accent-light); padding: 60px 80px;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .stats-bar .stat { text-align: center; padding: 20px; border-right: 1px solid var(--border); }
+    .stats-bar .stat:last-child { border-right: none; }
+    .stats-bar .stat-num { font-size: 2.5rem; }
+    .stats-bar .stat-context { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 2px; }
+
+    /* ── SCRIPTED REELS ── */
+    .reels-section {}
+    .reels-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+    .reels-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .reel-card {
+      border-radius: 4px; overflow: hidden; position: relative;
+      background: var(--charcoal); cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .reel-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+    .reel-thumb {
+      width: 100%; aspect-ratio: 9/16; object-fit: cover;
+      display: block; opacity: 0.9; transition: opacity 0.3s;
+    }
+    .reel-card:hover .reel-thumb { opacity: 1; }
+    .reel-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 24px 20px;
+      background: linear-gradient(0deg, rgba(26,25,22,0.95) 0%, transparent 100%);
+    }
+    .reel-brand { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .reel-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--cream); font-weight: 400; }
+    .reel-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--accent); color: var(--charcoal);
+      font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+      font-weight: 600; padding: 4px 10px; border-radius: 1px;
+    }
+    .play-icon {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 48px; height: 48px;
+      background: rgba(255,255,255,0.15); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3);
+      transition: background 0.3s;
+    }
+    .reel-card:hover .play-icon { background: rgba(255,255,255,0.25); }
+    .play-icon svg { width: 18px; height: 18px; fill: white; margin-left: 3px; }
+    .reel-placeholder {
+      width: 100%; aspect-ratio: 9/16;
+      background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .placeholder-icon { font-size: 2rem; opacity: 0.4; }
+
+    /* ── CREATIVE CONTENT ── */
+    .creative-section {}
+    .photo-masonry {
+      columns: 3; column-gap: 16px; margin-top: 48px;
+    }
+    .photo-item {
+      break-inside: avoid; margin-bottom: 16px;
+      position: relative; overflow: hidden; border-radius: 2px;
+      cursor: pointer;
+    }
+    .photo-item img {
+      width: 100%; display: block;
+      transition: transform 0.5s ease;
+    }
+    .photo-item:hover img { transform: scale(1.04); }
+    .photo-item-overlay {
+      position: absolute; inset: 0;
+      background: rgba(26,25,22,0); 
+      display: flex; align-items: flex-end; padding: 20px;
+      transition: background 0.3s;
+    }
+    .photo-item:hover .photo-item-overlay { background: rgba(26,25,22,0.45); }
+    .photo-item-label {
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: white; opacity: 0; transition: opacity 0.3s; font-weight: 500;
+    }
+    .photo-item:hover .photo-item-label { opacity: 1; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--warm-white); }
+    .testimonials-section .section-title { color: var(--charcoal); }
+    .social-note {
+      font-size: 0.8rem; color: var(--muted); margin-bottom: 48px; margin-top: 8px;
+    }
+    .social-note a { color: var(--accent); text-decoration: none; }
+    .testimonials-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 0;
+    }
+    .testimonial-card {
+      background: var(--cream); padding: 36px 32px;
+      border: 1px solid var(--border); border-radius: 2px;
+      transition: box-shadow 0.3s;
+    }
+    .testimonial-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400; line-height: 1.5;
+      color: var(--charcoal); margin-bottom: 20px; font-style: italic;
+    }
+    .testimonial-meta { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .testimonial-platform {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 12px; font-size: 0.68rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .platform-dot { width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+    .stars { color: var(--accent); font-size: 0.8rem; margin-bottom: 12px; letter-spacing: 2px; }
+
+    /* ── CAMPAIGN DATA ── */
+    .data-section {}
+    .data-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 60px;
+    }
+    .data-card {
+      padding: 40px 36px; border: 1px solid var(--border);
+      position: relative;
+    }
+    .data-card-platform {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .data-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .data-metric-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 400; line-height: 1;
+    }
+    .data-metric-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: 4px; }
+    .data-note { font-size: 0.8rem; color: var(--muted); margin-top: 24px; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    /* ── LETS WORK ── */
+    .contact-section {
+      background: var(--charcoal); color: var(--cream);
+      text-align: center; padding: 120px 80px;
+    }
+    .contact-section .section-tag { color: var(--accent); }
+    .contact-section .section-title { color: var(--cream); }
+    .contact-section .section-lead { color: rgba(255,255,255,0.5); margin: 0 auto 48px; }
+    .contact-email {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300;
+      color: var(--cream); text-decoration: none; letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 4px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-email:hover { color: var(--accent); border-color: var(--accent); }
+    .contact-socials { display: flex; gap: 24px; justify-content: center; margin-top: 40px; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15); padding: 10px 20px;
+      border-radius: 2px; transition: all 0.25s;
+    }
+    .social-link:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-packages {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      margin: 64px 0; text-align: left;
+    }
+    .contact-pkg {
+      background: rgba(255,255,255,0.04); padding: 36px 32px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .pkg-name { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--cream); margin-bottom: 16px; }
+    .pkg-list { list-style: none; }
+    .pkg-list li {
+      font-size: 0.82rem; color: rgba(255,255,255,0.5); padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 10px;
+    }
+    .pkg-list li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+    .pkg-list li:last-child { border-bottom: none; }
+    .pkg-popular { background: rgba(196,168,130,0.12); border-color: rgba(196,168,130,0.3); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 80px; display: flex; justify-content: space-between; align-items: center;
+    }
+    footer span { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    footer a { font-size: 0.75rem; color: rgba(255,255,255,0.3); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    /* ── VIDEO MODAL ── */
+    .modal {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+    }
+    .modal.active { display: flex; }
+    .modal-inner { position: relative; max-width: 400px; width: 90%; }
+    .modal-close {
+      position: absolute; top: -40px; right: 0;
+      background: none; border: none; color: white; font-size: 1.5rem;
+      cursor: pointer; opacity: 0.6; transition: opacity 0.2s;
+    }
+    .modal-close:hover { opacity: 1; }
+    .modal-video { width: 100%; border-radius: 4px; display: block; max-height: 80vh; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease forwards; }
+    .fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; }
+    .fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+    .fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 18px 28px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 50vw; }
+      .hero-left { padding: 60px 28px; }
+      section { padding: 80px 28px; }
+      .about-section { grid-template-columns: 1fr; }
+      .brands-grid { grid-template-columns: 1fr; }
+      .reels-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .photo-masonry { columns: 2; }
+      .stats-bar { padding: 40px 28px; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .stats-bar .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .data-grid { grid-template-columns: 1fr; }
+      .contact-packages { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px 28px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Dorine - Portfolio | Media Kit</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#scripted">Scripted Reels</a></li>
+    <li><a href="#creative">Creative</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Work</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding: 0;">
+  <div class="hero-left fade-up">
+    <p class="hero-tag">UGC Creator · Beauty · Skincare · Lifestyle · @dorinewtv</p>
+    <h1 class="hero-title">High-converting<br>content for <em>refined</em><br>brands</h1>
+    <p class="hero-subtitle">Beauty, skincare and lifestyle UGC that stops the scroll and drives results. Hook-led, brand-aesthetic videos crafted to perform on TikTok and Instagram, paid and organic.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Let's Collaborate</a>
+      <a href="#scripted" class="btn-ghost">View Work</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">971K</div>
+        <div class="stat-label">Organic views on a single video</div>
+      </div>
+      <div>
+        <div class="stat-num">4.4K</div>
+        <div class="stat-label">TikTok + Insta followers</div>
+      </div>
+      <div>
+        <div class="stat-num">191K</div>
+        <div class="stat-label">Total TikTok likes</div>
+      </div>
+      <div>
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Brand campaigns delivered</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-grid">
+      <div class="hero-img-wrap">
+        <!-- REPLACE: images/hero-1.jpg — portrait/lifestyle shot -->
+        <img src="images/hero-1.jpg" alt="Dorine Witteveen content creation" class="hero-img" />
+      </div>
+      <div class="hero-img-wrap">
+        <!-- REPLACE: images/hero-2.jpg — product flatlay -->
+        <img src="images/hero-2.jpg" alt="Skincare products" class="hero-img" />
+      </div>
+      <div class="hero-img-wrap">
+        <!-- REPLACE: images/hero-3.jpg — beauty shot or behind the scenes -->
+        <img src="images/hero-3.jpg" alt="Beauty content" class="hero-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WHO AM I -->
+<section id="about">
+  <div class="about-section">
+    <div class="about-photos">
+      <!-- REPLACE: images/about-tall.jpg — best portrait / lifestyle image -->
+      <img src="images/about-tall.jpg" alt="Dorine Witteveen" class="about-photo tall" />
+      <!-- REPLACE: images/about-top.jpg — product or behind-the-scenes -->
+      <img src="images/about-top.jpg" alt="Content creation" class="about-photo short" />
+      <!-- REPLACE: images/about-bottom.jpg — lifestyle or product shot -->
+      <img src="images/about-bottom.jpg" alt="Lifestyle" class="about-photo short" />
+    </div>
+    <div>
+      <p class="section-tag">Who I Am</p>
+      <h2 class="section-title">Refined UGC with a <em>performance</em> mindset</h2>
+      <ul class="about-bullets">
+        <li><span class="bullet-dot"></span><span>UGC creator based between Italy and the Netherlands</span></li>
+        <li><span class="bullet-dot"></span><span>Background in e-commerce, I understand what makes content convert</span></li>
+        <li><span class="bullet-dot"></span><span>Specialised in beauty, skincare, haircare and lifestyle content</span></li>
+        <li><span class="bullet-dot"></span><span>971K organic views on a single video, structure not luck</span></li>
+        <li><span class="bullet-dot"></span><span>Every video built around a hook that stops the scroll, a story that holds attention and a CTA that drives action</span></li>
+        <li><span class="bullet-dot"></span><span>Available worldwide for brand campaigns, paid UGC and ad creatives</span></li>
+      </ul>
+      <a href="mailto:witteveendorine@gmail.com" class="btn-primary">witteveendorine@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- BRANDS -->
+<section id="brands" class="brands-section">
+  <p class="section-tag">Collaborations</p>
+  <h2 class="section-title" style="color: var(--cream);">Brands I've <em>worked with</em></h2>
+  <p class="section-lead">Trusted by brands in beauty, skincare, and haircare to create content that resonates with real audiences.</p>
+  <div class="brands-grid">
+    <div class="brand-card">
+      <div class="brand-name">Arencia</div>
+      <div class="brand-sub">Korean Skincare</div>
+      <p class="brand-desc">Pore Melt Cleansing Oil, Fresh Green Rice Mochi Moisturizer & Vitamin C Booster Shot. Aesthetic product photography and hook-led reels for a glow-focused skincare audience.</p>
+      <div class="brand-tags">
+        <span class="brand-tag">Photo</span>
+        <span class="brand-tag">Reel</span>
+        <span class="brand-tag">Skincare</span>
+        <span class="brand-tag">K-Beauty</span>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-name">NOAH</div>
+      <div class="brand-sub">Italian Haircare</div>
+      <p class="brand-desc">Strengthening Lavender Shampoo, Colour Save & Smoothing Vanilla Conditioner. Aspirational before/after visuals with natural lighting and a simplicity-led content angle.</p>
+      <div class="brand-tags">
+        <span class="brand-tag">Photo</span>
+        <span class="brand-tag">Reel</span>
+        <span class="brand-tag">Haircare</span>
+        <span class="brand-tag">Natural Beauty</span>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-name">Abib</div>
+      <div class="brand-sub">Korean Skincare</div>
+      <p class="brand-desc">Jericho Rose Bifida Serum & Collagen collection. Clean aesthetic product photography, conversion-focused reel and curiosity-hook story format.</p>
+      <div class="brand-tags">
+        <span class="brand-tag">Photo</span>
+        <span class="brand-tag">Reel</span>
+        <span class="brand-tag">Skincare</span>
+        <span class="brand-tag">Anti-aging</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">4,282</div>
+    <div class="stat-context">TikTok brand deal views, 3 posts</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">8,192</div>
+    <div class="stat-context">Instagram brand deal views, 4 posts</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">593</div>
+    <div class="stat-context">Total likes across brand campaigns</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">125</div>
+    <div class="stat-context">Comments + shares/saves combined</div>
+  </div>
+</div>
+
+<!-- SCRIPTED REELS -->
+<section id="scripted">
+  <div class="reels-header">
+    <div>
+      <p class="section-tag">Scripted Content</p>
+      <h2 class="section-title">Hook-led <em>brand reels</em></h2>
+    </div>
+    <a href="https://www.tiktok.com/@dorinewtv" target="_blank" class="btn-ghost" style="white-space:nowrap;">View All on TikTok</a>
+  </div>
+  <div class="reels-grid">
+
+    <!-- REEL 1 — REPLACE src with your video file -->
+    <div class="reel-card" onclick="openModal('videos/reel-arencia-cleanser.mp4')">
+      <img src="images/thumb-arencia.jpg" class="reel-thumb" alt="Arencia reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">Arencia · Skincare</div>
+        <div class="reel-title">Pore Melt Cleansing Oil</div>
+      </div>
+      <div class="reel-badge">Brand Deal</div>
+    </div>
+
+    <!-- REEL 2 -->
+    <div class="reel-card" onclick="openModal('videos/reel-noah-hair.mp4')">
+      <img src="images/thumb-noah.jpg" class="reel-thumb" alt="NOAH reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">NOAH · Haircare</div>
+        <div class="reel-title">Haircare Routine Reel</div>
+      </div>
+      <div class="reel-badge">Brand Deal</div>
+    </div>
+
+    <!-- REEL 3 -->
+    <div class="reel-card" onclick="openModal('videos/reel-abib-serum.mp4')">
+      <img src="images/thumb-abib.jpg" class="reel-thumb" alt="Abib reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">Abib · K-Beauty</div>
+        <div class="reel-title">Bifida Serum Drop Routine</div>
+      </div>
+      <div class="reel-badge">Brand Deal</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CREATIVE REELS + PHOTOS -->
+<section id="creative">
+  <p class="section-tag">Creative Work</p>
+  <h2 class="section-title">Organic reels & <em>photography</em></h2>
+  <p class="section-lead">Beyond brand deals, the everyday content that builds trust, grows audience and demonstrates aesthetic range.</p>
+
+  <!-- Creative Reels Row -->
+  <div class="reels-grid" style="margin-top: 48px; margin-bottom: 48px;">
+
+    <div class="reel-card" onclick="openModal('videos/reel-organic-1.mp4')">
+      <img src="images/thumb-organic-1.jpg" class="reel-thumb" alt="Matcha reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">Trending · Skincare</div>
+        <div class="reel-title">Creative Short Reel</div>
+      </div>
+    </div>
+
+    <div class="reel-card" onclick="openModal('videos/reel-organic-2.mp4')">
+      <img src="images/thumb-organic-2.jpg" class="reel-thumb" alt="Eyeliner reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">Organic · Makeup</div>
+        <div class="reel-title">Brown Eyeliner GRWM</div>
+      </div>
+    </div>
+
+    <div class="reel-card" onclick="openModal('videos/reel-organic-3.mp4')">
+      <img src="images/thumb-organic-3.jpg" class="reel-thumb" alt="971K reel" />
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="reel-overlay">
+        <div class="reel-brand">Organic · Lifestyle</div>
+        <div class="reel-title">971K View Viral Video</div>
+      </div>
+      <div class="reel-badge" style="background: var(--charcoal); color: var(--cream);">971K Views</div>
+    </div>
+
+  </div>
+
+  <!-- Photo Masonry -->
+  <div class="photo-masonry">
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-1.jpg — Arencia Product flatlay (IMG_4755 or IMG_4700) -->
+      <img src="images/photo-1.jpg" alt="Arencia skincare products" />
+      <div class="photo-item-overlay"><span class="photo-item-label">NOAH · Line Up</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-2.jpg — Abib serum flatlay (IMG_4517_2) -->
+      <img src="images/photo-2.jpg" alt="Abib skincare" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Arencia · Flat Lay</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-3.jpg — NOAH products (IMG_4436 or IMG_4435) -->
+      <img src="images/photo-3.jpg" alt="NOAH haircare" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Abib · Styled Shot</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-4.jpg — Arencia mochi cleanser in use (IMG_4753) -->
+      <img src="images/photo-4.jpg" alt="Arencia cleanser texture" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Arencia · Texture Shot</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-5.jpg — NOAH hair from back (IMG_3424 or IMG_3423) -->
+      <img src="images/photo-5.jpg" alt="Hair content" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Makeup · Toturial</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-6.jpg — eyeliner makeup shot (IMG_3566 or IMG_3586_2) -->
+      <img src="images/photo-6.jpg" alt="Makeup content" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Clothing · Unboxing</span></div>
+    </div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-7.jpg — Abib collagen jar flatlay (IMG_3562 or IMG_3565_2) -->
+      <img src="images/photo-7.jpg" alt="Abib collagen" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Arencia · Vitamin C</span></div>
+    </div>
+    <div class="photo-item">
+  <img src="images/photo-9.jpg" alt="Content" />
+  <div class="photo-item-overlay"><span class="photo-item-label">Arencia · Close Up</span></div>
+</div>
+
+    <div class="photo-item">
+      <!-- REPLACE: images/photo-8.jpg — NOAH full product lineup (IMG_3448_4 or IMG_3421) -->
+      <img src="images/photo-8.jpg" alt="NOAH product lineup" />
+      <div class="photo-item-overlay"><span class="photo-item-label">Creative</span></div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- TESTIMONIALS / SOCIAL PROOF -->
+<section id="testimonials" class="testimonials-section">
+  <p class="section-tag">What People Are Saying</p>
+  <h2 class="section-title">Real audience <em>reactions</em></h2>
+  <p class="social-note">Real comments left on <a href="https://www.tiktok.com/@dorinewtv" target="_blank">@dorinewtv on TikTok</a>.</p>
+
+  <div class="testimonials-grid" style="grid-template-columns: 1fr 1fr;">
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"I've never had a match but now I think I need to try both!"</p>
+      <div class="testimonial-platform"><span class="platform-dot"></span> TikTok comment</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"Ohh this looks like something we should all be trying!"</p>
+      <div class="testimonial-platform"><span class="platform-dot"></span> TikTok comment</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"Okayy I see you, this is honestly the goal!"</p>
+      <div class="testimonial-platform"><span class="platform-dot"></span> TikTok comment</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"I want to try this cleanser, haven't purchased yet? How is it?!"</p>
+      <div class="testimonial-platform"><span class="platform-dot"></span> TikTok comment</div>
+    </div>
+
+  </div>
+
+  <!-- Campaign data -->
+  <div class="data-grid" style="margin-top: 60px;">
+    <div class="data-card">
+      <div class="data-card-platform">TikTok Brand Campaigns (3 Posts)</div>
+      <div class="data-metrics">
+        <div>
+          <div class="data-metric-val">4,282</div>
+          <div class="data-metric-label">Total Views</div>
+        </div>
+        <div>
+          <div class="data-metric-val">357</div>
+          <div class="data-metric-label">Likes</div>
+        </div>
+        <div>
+          <div class="data-metric-val">56</div>
+          <div class="data-metric-label">Comments</div>
+        </div>
+        <div>
+          <div class="data-metric-val">29</div>
+          <div class="data-metric-label">Shares / Saves</div>
+        </div>
+      </div>
+      <div class="data-note">Engagement rate significantly above TikTok average. High comment-to-view ratio signals genuine audience interest.</div>
+    </div>
+    <div class="data-card">
+      <div class="data-card-platform">Instagram Brand Campaigns (4 Posts)</div>
+      <div class="data-metrics">
+        <div>
+          <div class="data-metric-val">8,192</div>
+          <div class="data-metric-label">Total Views</div>
+        </div>
+        <div>
+          <div class="data-metric-val">236</div>
+          <div class="data-metric-label">Likes</div>
+        </div>
+        <div>
+          <div class="data-metric-val">69</div>
+          <div class="data-metric-label">Comments</div>
+        </div>
+        <div>
+          <div class="data-metric-val">10</div>
+          <div class="data-metric-label">Shares / Saves</div>
+        </div>
+      </div>
+      <div class="data-note">Strong comment volume on Instagram brand posts. Comments indicate purchase intent and content saves for later reference.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LET'S WORK -->
+<section id="contact" class="contact-section">
+  <p class="section-tag">Let's Work Together</p>
+  <h2 class="section-title">Ready to create <em>something great?</em></h2>
+  <p class="section-lead">I respond to all brand enquiries within 24 hours. Send me a brief, a product, or just a hello and let's see if we're a fit.</p>
+
+  <a href="mailto:witteveendorine@gmail.com" class="contact-email">witteveendorine@gmail.com</a>
+
+  <div class="contact-packages">
+    <div class="contact-pkg">
+      <div class="pkg-name">Starter</div>
+      <div class="pkg-price">From €150</div>
+      <ul class="pkg-list">
+        <li>1–2 short-form videos (12–25 sec)</li>
+        <li>Hook-driven, story-led content</li>
+        <li>Edited & captioned, ready to post</li>
+        <li>TikTok / Reels / Stories formats</li>
+        <li>Organic usage rights included</li>
+      </ul>
+    </div>
+    <div class="contact-pkg pkg-popular">
+      <div class="pkg-name">Standard · Most Popular</div>
+      <div class="pkg-price">From €350</div>
+      <ul class="pkg-list">
+        <li>3 short-form videos</li>
+        <li>Clean aesthetic photography (5 images)</li>
+        <li>Concept & hook strategy included</li>
+        <li>Organic usage rights included</li>
+        <li>Paid ads rights available add-on</li>
+      </ul>
+    </div>
+    <div class="contact-pkg">
+      <div class="pkg-name">Brand Partnership</div>
+      <div class="pkg-price">Custom</div>
+      <ul class="pkg-list">
+        <li>5+ videos across formats</li>
+        <li>Full photography set</li>
+        <li>Extended content strategy</li>
+        <li>Whitelisting / Spark Ads</li>
+        <li>Priority turnaround</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contact-socials">
+    <a href="https://www.tiktok.com/@dorinewtv" target="_blank" class="social-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+      TikTok @dorinewtv
+    </a>
+    <a href="https://www.instagram.com/dorinewtv/" target="_blank" class="social-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram @dorinewtv
+    </a>
+  </div>
+</section
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Dorine - Portfolio | Media Kit</span>
+  <span>IT · NL — Available worldwide</span>
+  <a href="mailto:witteveendorine@gmail.com">witteveendorine@gmail.com</a>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div class="modal" id="videoModal">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <video class="modal-video" id="modalVideo" controls playsinline></video>
+  </div>
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('modalVideo');
+    video.src = src;
+    modal.classList.add('active');
+    video.play();
+  }
+  function closeModal() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('modalVideo');
+    video.pause();
+    video.src = '';
+    modal.classList.remove('active');
+  }
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+
+</body>
+</html>
